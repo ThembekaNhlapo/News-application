@@ -47,6 +47,7 @@ def article_list(request):
     all readers,
     while unapproved articles are visible only to editors or
     their author.
+    Show all approved articles to the reader.
     '''
     if is_editor(request.user):
         articles = Article.objects.all().order_by('-created_at')
