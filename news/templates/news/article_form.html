@@ -1,0 +1,10 @@
+{% extends 'news/base.html' %}
+{% block title %}New article{% endblock %}
+{% block content %}
+<h1>New article</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit for review</button>
+</form>
+{% endblock %}

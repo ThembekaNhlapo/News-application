@@ -1,0 +1,17 @@
+{% extends 'news/base.html' %}
+{% block title %}Pending articles{% endblock %}
+{% block content %}
+<h1>Pending articles</h1>
+{% for article in articles %}
+    <div class="article-card">
+        <h3><a href="{% url 'article_detail' article.pk %}">{{ article.title }}</a></h3>
+        <p class="meta">By {{ article.author.username }} &middot; {{ article.created_at|date:"d M Y" }}</p>
+        <form action="{% url 'approve_article' article.pk %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Approve &amp; publish</button>
+        </form>
+    </div>
+{% empty %}
+    <p>Nothing waiting for review.</p>
+{% endfor %}
+{% endblock %}

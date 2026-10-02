@@ -1,0 +1,10 @@
+{% extends 'news/base.html' %}
+{% block title %}Approve article{% endblock %}
+{% block content %}
+<h1>Approve "{{ article.title }}"?</h1>
+<p>{{ article.content|truncatewords:40 }}</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm approval</button>
+</form>
+{% endblock %}

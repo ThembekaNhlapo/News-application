@@ -1,0 +1,26 @@
+{% extends 'news/base.html' %}
+{% block title %}{{ article.title }}{% endblock %}
+{% block content %}
+<article>
+    <h1>{{ article.title }}</h1>
+    <p class="meta">
+        By {{ article.author.username }}
+        {% if article.publisher %}for {{ article.publisher.name }}{% endif %}
+        &middot; {{ article.created_at|date:"d M Y H:i" }}
+        &middot;
+        {% if article.approved %}
+            <span class="badge approved">Approved</span>
+        {% else %}
+            <span class="badge pending">Pending review</span>
+        {% endif %}
+    </p>
+    <p>{{ article.content|linebreaks }}</p>
+</article>
+
+{% if user.role == 'editor' and not article.approved %}
+    <form action="{% url 'approve_article' article.pk %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Approve &amp; publish</button>
+    </form>
+{% endif %}
+{% endblock %}

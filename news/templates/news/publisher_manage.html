@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Publisher Management Dashboard</h2>
+    <div class="row mt-4">
+        <div class="card p-3">
+            <h4>{% if selected_publisher %}Editing Publisher{% else %}Add 
+                New Publisher{% endif %}</h4>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Save Publisher
+                </button>
+                {% if selected_publisher %}
+                <a href="{% url 'publisher_manage' %}" class="btn btn-secondary">
+                    Cancel Edit</a>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h4>Existing Publications</h4>
+        <div class="list-group">
+            {% for pub in publishers %}
+                <div class="list-group-item d-flex 
+                justify-content-between align-items-center">
+                </div>
+                    <strong>{{ pub.name }}</strong> ({{ pub.website }})<br>
+                    <small>Editors: {{ pub.editors.count }} | Journals: 
+                        {{ pub.journals.count }}</small>
+                </div>
+                <div> 
+                    <a href="{% url 'publisher_edit' pub.pk %}" 
+                        class="btn btn-sm btn-outline-primary">Edit / Staff</a>
+                    <a href="{% url 'publisher_delete' pub.pk %}" 
+                        class="btn btn-sm btn-outline-danger">Delete</a>
+                </div>
+        </div>
+        {% empty %}
+            <p class="text-muted">No publishers added yet.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
