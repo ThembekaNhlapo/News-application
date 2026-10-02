@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>news.tests package &mdash; News Application 00.00.01 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=d7bb8d4d"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="news.migrations package" href="news.migrations.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            News Application
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">news</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="news.html">news package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="news.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="news.management.html">news.management package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="news.migrations.html">news.migrations package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">news.tests package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="news.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.html#module-news.admin">news.admin module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.html#module-news.api_permissions">news.api_permissions module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.html#module-news.api_urls">news.api_urls module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.html#module-news.api_views">news.api_views module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.html#module-news.apps">news.apps module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.html#module-news.forms">news.forms module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.html#module-news.models">news.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.html#module-news.permissions_utils">news.permissions_utils module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.html#module-news.serializers">news.serializers module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.html#module-news.signals">news.signals module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.html#module-news.urls">news.urls module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.html#module-news.views">news.views module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.html#module-news">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">News Application</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">news</a></li>
+          <li class="breadcrumb-item"><a href="news.html">news package</a></li>
+      <li class="breadcrumb-item active">news.tests package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/news.tests.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="news-tests-package">
+<h1>news.tests package<a class="headerlink" href="#news-tests-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-news.tests.test_api">
+<span id="news-tests-test-api-module"></span><h2>news.tests.test_api module<a class="headerlink" href="#module-news.tests.test_api" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="news.tests.test_api.ApprovedArticleLogAPITests">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">news.tests.test_api.</span></span><span class="sig-name descname"><span class="pre">ApprovedArticleLogAPITests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ApprovedArticleLogAPITests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ApprovedArticleLogAPITests" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#news.tests.test_api.BaseAPITestCase" title="news.tests.test_api.BaseAPITestCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseAPITestCase</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.ApprovedArticleLogAPITests.test_approval_creates_a_log_entry_via_real_signal_flow">
+<span class="sig-name descname"><span class="pre">test_approval_creates_a_log_entry_via_real_signal_flow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ApprovedArticleLogAPITests.test_approval_creates_a_log_entry_via_real_signal_flow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ApprovedArticleLogAPITests.test_approval_creates_a_log_entry_via_real_signal_flow" title="Link to this definition"></a></dt>
+<dd><p>Exercise the real (unmocked) signal chain end-to-end by having the
+signal’s internal <cite>requests.post</cite> call hit our own test client
+would require a live server, so instead we verify the log endpoint
+works correctly when called directly, which is what the signal
+calls under the hood.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.ApprovedArticleLogAPITests.test_approved_log_rejects_unknown_article_id">
+<span class="sig-name descname"><span class="pre">test_approved_log_rejects_unknown_article_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ApprovedArticleLogAPITests.test_approved_log_rejects_unknown_article_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ApprovedArticleLogAPITests.test_approved_log_rejects_unknown_article_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.ApprovedArticleLogAPITests.test_viewing_the_log_requires_authentication">
+<span class="sig-name descname"><span class="pre">test_viewing_the_log_requires_authentication</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ApprovedArticleLogAPITests.test_viewing_the_log_requires_authentication"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ApprovedArticleLogAPITests.test_viewing_the_log_requires_authentication" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleApprovalTests">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">news.tests.test_api.</span></span><span class="sig-name descname"><span class="pre">ArticleApprovalTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleApprovalTests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleApprovalTests" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#news.tests.test_api.BaseAPITestCase" title="news.tests.test_api.BaseAPITestCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseAPITestCase</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleApprovalTests.test_editor_can_approve_pending_article">
+<span class="sig-name descname"><span class="pre">test_editor_can_approve_pending_article</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_email</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_api_post</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleApprovalTests.test_editor_can_approve_pending_article"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleApprovalTests.test_editor_can_approve_pending_article" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleApprovalTests.test_journalist_cannot_approve_article">
+<span class="sig-name descname"><span class="pre">test_journalist_cannot_approve_article</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleApprovalTests.test_journalist_cannot_approve_article"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleApprovalTests.test_journalist_cannot_approve_article" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleApprovalTests.test_reader_cannot_approve_article">
+<span class="sig-name descname"><span class="pre">test_reader_cannot_approve_article</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleApprovalTests.test_reader_cannot_approve_article"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleApprovalTests.test_reader_cannot_approve_article" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleCreateTests">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">news.tests.test_api.</span></span><span class="sig-name descname"><span class="pre">ArticleCreateTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleCreateTests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleCreateTests" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#news.tests.test_api.BaseAPITestCase" title="news.tests.test_api.BaseAPITestCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseAPITestCase</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleCreateTests.test_editor_cannot_create_article">
+<span class="sig-name descname"><span class="pre">test_editor_cannot_create_article</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleCreateTests.test_editor_cannot_create_article"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleCreateTests.test_editor_cannot_create_article" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleCreateTests.test_journalist_can_create_article">
+<span class="sig-name descname"><span class="pre">test_journalist_can_create_article</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleCreateTests.test_journalist_can_create_article"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleCreateTests.test_journalist_can_create_article" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleCreateTests.test_reader_cannot_create_article">
+<span class="sig-name descname"><span class="pre">test_reader_cannot_create_article</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleCreateTests.test_reader_cannot_create_article"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleCreateTests.test_reader_cannot_create_article" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleListTests">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">news.tests.test_api.</span></span><span class="sig-name descname"><span class="pre">ArticleListTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleListTests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleListTests" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#news.tests.test_api.BaseAPITestCase" title="news.tests.test_api.BaseAPITestCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseAPITestCase</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleListTests.test_anonymous_user_is_rejected">
+<span class="sig-name descname"><span class="pre">test_anonymous_user_is_rejected</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleListTests.test_anonymous_user_is_rejected"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleListTests.test_anonymous_user_is_rejected" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleListTests.test_author_can_view_own_unapproved_article">
+<span class="sig-name descname"><span class="pre">test_author_can_view_own_unapproved_article</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleListTests.test_author_can_view_own_unapproved_article"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleListTests.test_author_can_view_own_unapproved_article" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleListTests.test_editor_can_view_any_unapproved_article">
+<span class="sig-name descname"><span class="pre">test_editor_can_view_any_unapproved_article</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleListTests.test_editor_can_view_any_unapproved_article"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleListTests.test_editor_can_view_any_unapproved_article" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleListTests.test_journalist_cannot_use_subscribed_endpoint">
+<span class="sig-name descname"><span class="pre">test_journalist_cannot_use_subscribed_endpoint</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleListTests.test_journalist_cannot_use_subscribed_endpoint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleListTests.test_journalist_cannot_use_subscribed_endpoint" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleListTests.test_list_only_returns_approved_articles">
+<span class="sig-name descname"><span class="pre">test_list_only_returns_approved_articles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleListTests.test_list_only_returns_approved_articles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleListTests.test_list_only_returns_approved_articles" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleListTests.test_reader_can_retrieve_subscribed_articles_only">
+<span class="sig-name descname"><span class="pre">test_reader_can_retrieve_subscribed_articles_only</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleListTests.test_reader_can_retrieve_subscribed_articles_only"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleListTests.test_reader_can_retrieve_subscribed_articles_only" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleListTests.test_unapproved_article_hidden_from_reader_detail">
+<span class="sig-name descname"><span class="pre">test_unapproved_article_hidden_from_reader_detail</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleListTests.test_unapproved_article_hidden_from_reader_detail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleListTests.test_unapproved_article_hidden_from_reader_detail" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleUpdateDeleteTests">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">news.tests.test_api.</span></span><span class="sig-name descname"><span class="pre">ArticleUpdateDeleteTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleUpdateDeleteTests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleUpdateDeleteTests" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#news.tests.test_api.BaseAPITestCase" title="news.tests.test_api.BaseAPITestCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseAPITestCase</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleUpdateDeleteTests.test_editor_can_delete_any_article">
+<span class="sig-name descname"><span class="pre">test_editor_can_delete_any_article</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleUpdateDeleteTests.test_editor_can_delete_any_article"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleUpdateDeleteTests.test_editor_can_delete_any_article" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleUpdateDeleteTests.test_journalist_can_delete_own_article_but_not_others">
+<span class="sig-name descname"><span class="pre">test_journalist_can_delete_own_article_but_not_others</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleUpdateDeleteTests.test_journalist_can_delete_own_article_but_not_others"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleUpdateDeleteTests.test_journalist_can_delete_own_article_but_not_others" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.ArticleUpdateDeleteTests.test_reader_cannot_delete_article">
+<span class="sig-name descname"><span class="pre">test_reader_cannot_delete_article</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#ArticleUpdateDeleteTests.test_reader_cannot_delete_article"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.ArticleUpdateDeleteTests.test_reader_cannot_delete_article" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="news.tests.test_api.BaseAPITestCase">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">news.tests.test_api.</span></span><span class="sig-name descname"><span class="pre">BaseAPITestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#BaseAPITestCase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.BaseAPITestCase" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">APITestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.BaseAPITestCase.auth_as">
+<span class="sig-name descname"><span class="pre">auth_as</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#BaseAPITestCase.auth_as"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.BaseAPITestCase.auth_as" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.BaseAPITestCase.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#BaseAPITestCase.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.BaseAPITestCase.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="news.tests.test_api.NewsletterAPITests">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">news.tests.test_api.</span></span><span class="sig-name descname"><span class="pre">NewsletterAPITests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#NewsletterAPITests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.NewsletterAPITests" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#news.tests.test_api.BaseAPITestCase" title="news.tests.test_api.BaseAPITestCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseAPITestCase</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.NewsletterAPITests.test_editor_can_create_newsletter">
+<span class="sig-name descname"><span class="pre">test_editor_can_create_newsletter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#NewsletterAPITests.test_editor_can_create_newsletter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.NewsletterAPITests.test_editor_can_create_newsletter" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.NewsletterAPITests.test_journalist_can_create_newsletter">
+<span class="sig-name descname"><span class="pre">test_journalist_can_create_newsletter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#NewsletterAPITests.test_journalist_can_create_newsletter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.NewsletterAPITests.test_journalist_can_create_newsletter" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.NewsletterAPITests.test_reader_can_view_but_not_create_newsletter">
+<span class="sig-name descname"><span class="pre">test_reader_can_view_but_not_create_newsletter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#NewsletterAPITests.test_reader_can_view_but_not_create_newsletter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.NewsletterAPITests.test_reader_can_view_but_not_create_newsletter" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="news.tests.test_api.TokenAuthTests">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">news.tests.test_api.</span></span><span class="sig-name descname"><span class="pre">TokenAuthTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#TokenAuthTests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.TokenAuthTests" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#news.tests.test_api.BaseAPITestCase" title="news.tests.test_api.BaseAPITestCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseAPITestCase</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.TokenAuthTests.test_obtain_token_with_invalid_credentials_fails">
+<span class="sig-name descname"><span class="pre">test_obtain_token_with_invalid_credentials_fails</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#TokenAuthTests.test_obtain_token_with_invalid_credentials_fails"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.TokenAuthTests.test_obtain_token_with_invalid_credentials_fails" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_api.TokenAuthTests.test_obtain_token_with_valid_credentials">
+<span class="sig-name descname"><span class="pre">test_obtain_token_with_valid_credentials</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_api.html#TokenAuthTests.test_obtain_token_with_valid_credentials"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_api.TokenAuthTests.test_obtain_token_with_valid_credentials" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-news.tests.test_models">
+<span id="news-tests-test-models-module"></span><h2>news.tests.test_models module<a class="headerlink" href="#module-news.tests.test_models" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="news.tests.test_models.ArticleApprovalSignalTests">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">news.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">ArticleApprovalSignalTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_models.html#ArticleApprovalSignalTests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_models.ArticleApprovalSignalTests" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_models.ArticleApprovalSignalTests.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_models.html#ArticleApprovalSignalTests.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_models.ArticleApprovalSignalTests.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_models.ArticleApprovalSignalTests.test_approval_triggers_email_and_api_post_exactly_once">
+<span class="sig-name descname"><span class="pre">test_approval_triggers_email_and_api_post_exactly_once</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_email</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_api_post</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_models.html#ArticleApprovalSignalTests.test_approval_triggers_email_and_api_post_exactly_once"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_models.ArticleApprovalSignalTests.test_approval_triggers_email_and_api_post_exactly_once" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_models.ArticleApprovalSignalTests.test_resaving_an_already_approved_article_does_not_refire">
+<span class="sig-name descname"><span class="pre">test_resaving_an_already_approved_article_does_not_refire</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_email</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mock_api_post</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_models.html#ArticleApprovalSignalTests.test_resaving_an_already_approved_article_does_not_refire"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_models.ArticleApprovalSignalTests.test_resaving_an_already_approved_article_does_not_refire" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="news.tests.test_models.UserRoleGroupTests">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">news.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">UserRoleGroupTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_models.html#UserRoleGroupTests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_models.UserRoleGroupTests" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_models.UserRoleGroupTests.test_non_reader_subscription_fields_are_cleared">
+<span class="sig-name descname"><span class="pre">test_non_reader_subscription_fields_are_cleared</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_models.html#UserRoleGroupTests.test_non_reader_subscription_fields_are_cleared"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_models.UserRoleGroupTests.test_non_reader_subscription_fields_are_cleared" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_models.UserRoleGroupTests.test_switching_role_moves_user_to_new_group">
+<span class="sig-name descname"><span class="pre">test_switching_role_moves_user_to_new_group</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_models.html#UserRoleGroupTests.test_switching_role_moves_user_to_new_group"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_models.UserRoleGroupTests.test_switching_role_moves_user_to_new_group" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.tests.test_models.UserRoleGroupTests.test_user_is_added_to_group_matching_role">
+<span class="sig-name descname"><span class="pre">test_user_is_added_to_group_matching_role</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/news/tests/test_models.html#UserRoleGroupTests.test_user_is_added_to_group_matching_role"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.tests.test_models.UserRoleGroupTests.test_user_is_added_to_group_matching_role" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-news.tests">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-news.tests" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="news.migrations.html" class="btn btn-neutral float-left" title="news.migrations package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Thembeka Nhlapo.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
