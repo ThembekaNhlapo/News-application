@@ -7,7 +7,7 @@ from .models import ApprovedArticleLog, Article, CustomUser, Newsletter, Publish
 @admin.register(CustomUser)
 class CustomUserAdmin(UserAdmin):
     '''
-    Custom User admin interface allowing managemnet of custom
+    Custom User admin interface allowing management of custom
     fields such as
     role subscriptions, and associated group permissions.
     '''
@@ -19,7 +19,7 @@ class CustomUserAdmin(UserAdmin):
         ('Custom Role & Subscriptions', {
             'fields': ('role', 'subscriptions_publishers',
                        'subscriptions_journalists')
-        })
+        }),
     )
 
 @admin.register(Publisher)
@@ -29,13 +29,13 @@ class PublisherAdmin(admin.ModelAdmin):
     filter_horizontal for clean
     ManyToMany selection of associated editors and journalists.
     '''
-    list_display = ('name', 'website')
+    list_display = ('name', 'description')
     search_fields = ('name',)
     filter_horizontal = ('editors', 'journalists')
 
     fieldsets = (
         (None, {
-            'fields': ('name', 'website')
+            'fields': ('name', 'description')
         }),
         ('Associated Personnel', {
             'fields': ('editors', 'journalists')
@@ -69,5 +69,5 @@ class ApprovedArticleLogAdmin(admin.ModelAdmin):
     Read-only admin interface for monitoring internal syndication
     logs.
     '''
-    list_display = ('article', 'approved_at')
-    readonly_fields = ('article', 'approved_at')
+    list_display = ('article', 'logged_at')
+    readonly_fields = ('article', 'logged_at')

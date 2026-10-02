@@ -180,14 +180,6 @@ def newsletter_detail(request, pk):
     return render(request, 'news/newsletter_detail.html', 
                   {'newsletter': newsletter})
 
-def newsletter_detail(request, pk):
-    '''Displays details and articles included within a specific
-    newsletter.
-    '''
-    newsletter = get_object_or_404(Newsletter, pk=pk)
-    return render(request, 'news/newsletter_detail.html', 
-                  {'newsletter': newsletter})
-
 @login_required
 def newsletter_create(request):
     '''

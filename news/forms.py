@@ -14,14 +14,14 @@ class ArticleForm(forms.ModelForm):
     Form for creating and updating Article instances.
     '''
     class Meta:
-        model = Article
-        fields = ['title', 'content', 'publisher']
+        model = Publisher
+        fields = ['name', 'description', 'editors', 'journalists']
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'content': forms.Textarea(attrs={'class': 'form-control', 'rows': 6}),
-            'publisher': forms.Select(attrs={'class': 'form-control'}),
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
+            'editors': forms.CheckboxSelectMultiple(),
+            'journalists': forms.CheckboxSelectMultiple(),
         }
-
 
 class NewsletterForm(forms.ModelForm):
     '''
@@ -43,21 +43,21 @@ class PublisherForm(forms.ModelForm):
     '''
     class Meta:
         model = Publisher
-        fields = ['name', 'website','editors', 'journalists']
+        fields = ['name', 'description', 'editors', 'journalists']
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
-            'website': forms.URLInput(attrs={'class': 'form-control'}),
+            'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
             'editors': forms.CheckboxSelectMultiple(),
             'journalists': forms.CheckboxSelectMultiple(),
         }
 
-        def __init__(self, *args, **kwargs):
-            '''
-            Filters querysets for editors and journalists to display
-            appropriate user roles.
-            '''
-            super().__init__(*args, **kwargs)
-            self.fields['editors'].queryset = CustomUser.objects.filter(role='editor')
-            self.fields['journalists'].queryset= CustomUser.objects.filter(role='journalist')
+    def __init__(self, *args, **kwargs):
+        '''
+        Filters querysets for editors and journalists to display
+        appropriate user roles.
+        '''
+        super().__init__(*args, **kwargs)
+        self.fields['editors'].queryset = CustomUser.objects.filter(role='editor')
+        self.fields['journalists'].queryset = CustomUser.objects.filter(role='journalist')
 
 
