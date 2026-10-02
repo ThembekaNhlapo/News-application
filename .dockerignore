@@ -1,0 +1,13 @@
+# Files that should NOT be copied into the Docker image
+.git
+.gitignore
+venv/
+env/
+.venv/
+__pycache__/
+*.pyc
+db.sqlite3
+.env
+.idea/
+.vscode/
+docs/
